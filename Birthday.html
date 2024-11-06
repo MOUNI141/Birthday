@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0c3fc;
+            background-image: linear-gradient(45deg, #e0c3fc, #8a2be2);
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        /* Sparkle Effect */
+        .sparkles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            opacity: 0;
+            animation: sparkle 1.5s linear infinite;
+        }
+
+        @keyframes sparkle {
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(0.5);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(-30px) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(50px) scale(0.5);
+            }
+        }
+
+        /* Fade-in and Slide-in Animation */
+        .welcome-message {
+            font-size: 2.5rem;
+            opacity: 0;
+            animation: fadeInSlide 1s ease-in forwards;
+            color: #ffe4f3;
+        }
+
+        .happy-birthday {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-top: 15px;
+            opacity: 0;
+            animation: fadeInSlide 1.2s ease-in-out 1s forwards;
+            color: #ffffff;
+        }
+
+        /* Updated Wish link styling */
+        .wish-link {
+            display: inline-block;
+            margin-top: 30px;
+            font-size: 1.3rem; /* Smaller font size */
+            color: #d8b0ff; /* Lighter purple for link */
+            text-decoration: none;
+            opacity: 0;
+            animation: fadeIn 1s ease-in 2s forwards;
+            cursor: pointer;
+        }
+
+        /* Hover effect for link */
+        .wish-link:hover {
+            color: #c69bff; /* Slightly lighter purple on hover */
+            text-decoration: underline;
+        }
+
+        /* Keyframes for fade-in and slide */
+        @keyframes fadeInSlide {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Fade-in animation for link */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-message">Welcome to Your Special Day</div>
+        <div class="happy-birthday">Happy Birthday Mamu ❤️ </div>
+        <a href="wish.html" class="wish-link">Click here to wish ^_^ </a>
+    </div>
+
+    <!-- Sparkles Effect -->
+    <div class="sparkles">
+        <!-- Sparkles generated dynamically with JavaScript -->
+    </div>
+
+    <script>
+        // JavaScript to create sparkles
+        const sparkleContainer = document.querySelector('.sparkles');
+        
+        for (let i = 0; i < 50; i++) {
+            const sparkle = document.createElement('div');
+            sparkle.classList.add('sparkle');
+            sparkle.style.left = `${Math.random() * 100}%`;
+            sparkle.style.animationDelay = `${Math.random() * 2}s`;
+            sparkleContainer.appendChild(sparkle);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Birthday Wish</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Text styling with gradient */
+        .birthday-text {
+            font-size: 1.8rem;
+            font-weight: bold;
+            line-height: 1.4;
+            background: linear-gradient(45deg, #ff99cc, #cc99ff); /* Pink to purple gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.4); /* Subtle glow effect */
+            margin-bottom: 20px;
+        }
+
+        /* Styling for "WISH?" text */
+        .wish-part {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Container for image and text */
+        .image-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* GIF styling */
+        .birthday-gif {
+            max-width: 15%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(15, 15, 15, 0.5);
+        }
+
+        .sparkles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            animation: twinkle 1.5s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% {
+                opacity: 0.2;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1.5);
+            }
+        }
+
+        .done-wish {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        .let-go-link {
+            font-size: 1.3rem;
+            color: #d8b0ff;
+            text-decoration: none;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        .let-go-link:hover {
+            color: #c69bff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="sparkles">
+        <div class="sparkle" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
+        <div class="sparkle" style="top: 30%; left: 30%; animation-delay: 0.2s;"></div>
+        <div class="sparkle" style="top: 50%; left: 50%; animation-delay: 0.4s;"></div>
+        <div class="sparkle" style="top: 20%; left: 70%; animation-delay: 0.6s;"></div>
+        <div class="sparkle" style="top: 80%; left: 40%; animation-delay: 0.8s;"></div>
+        <div class="sparkle" style="top: 60%; left: 90%; animation-delay: 1s;"></div>
+        <div class="sparkle" style="top: 90%; left: 20%; animation-delay: 1.2s;"></div>
+        <div class="sparkle" style="top: 40%; left: 10%; animation-delay: 1.4s;"></div>
+        <div class="sparkle" style="top: 75%; left: 80%; animation-delay: 1.6s;"></div>
+        <div class="sparkle" style="top: 20%; left: 90%; animation-delay: 1.8s;"></div>
+    </div>
+    
+    <div class="image-container">
+        <!-- Text with gradient effect, "WISH?" centered -->
+        <p class="birthday-text">
+            <span class="wish-part">WISH?</span>
+            I MEAN, YOU ALREADY HAVE ME<br>
+            ......SO I DON'T KNOW WHAT ELSE YOU COULD POSSIBLY WISH FOR.<br>
+            BUT KNOCK YOURSELF OUT
+        </p>
+        <img src="cake.gif" alt="Birthday GIF" class="birthday-gif">
+    </div>
+
+    <div class="done-wish">
+        Done wish? 👀
+        <a href="nextpage.html" class="let-go-link"> ⇒let's go</a>
+    </div>
+</body>
+</html>
